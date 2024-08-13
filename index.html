@@ -26,7 +26,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             var get = getQ();
             var pay = (getCoin().length != 0) ? getCoin() : 'https://linktr.ee/petrolex';
-            var url = (get.static=='true') ? ((get.type=='bitcoin') ? '/img/bitcoin_qrcode.png' : '/img/etherium_qrcode.png' ) : 'https://chart.googleapis.com/chart?cht=qr&chl='+pay+'&chs=300x300&choe=UTF-8&chld=L|2';
+            var url = (get.static=='true') ? ((get.type=='bitcoin') ? 'img/bitcoin_qrcode.png' : 'img/etherium_qrcode.png' ) : 'https://chart.googleapis.com/chart?cht=qr&chl='+pay+'&chs=300x300&choe=UTF-8&chld=L|2';
             document.querySelector('#qr img').src = url;
             document.querySelector('#qr p').textContent= pay;
             if (getQ().title) document.querySelector('#qr h2').textContent = decodeURI(getQ().title);
